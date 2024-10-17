@@ -1,0 +1,217 @@
+/* Reset osnovnog stila */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stil za telo stranice (body) */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Svetlo siva pozadina */
+    color: #333; /* Tamno siva boja teksta */
+}
+
+/* Navigacija za glavnu stranicu */
+nav {
+    width: 100%; /* Navigacija zauzima celu širinu ekrana */
+    background-color: #444; /* Tamno siva pozadina navigacije */
+    padding: 15px 0; /* Razmak unutar navigacije */
+    position: fixed; /* Fiksna navigacija */
+    top: 0; /* Na vrhu ekrana */
+    left: 0; /* Poravnavanje levo */
+    z-index: 3; /* Ispred ostalog sadržaja */
+}
+
+/* Stil za listu u navigaciji */
+nav ul {
+    list-style: none; /* Uklanjanje oznaka liste */
+    display: flex; /* Horizontalno prikazivanje linkova */
+    justify-content: flex-start; /* Poravnavanje navigacije s leve strane */
+    gap: 2rem; /* Razmak između linkova */
+    padding-left: 20px; /* Razmak s leve strane */
+}
+
+/* Stil za linkove */
+nav ul li {
+    margin-right: auto; /* Pomeranje linkova ka levoj strani */
+}
+
+/* Stil za linkove */
+nav ul li a {
+    color: white; /* Boja linkova */
+    text-decoration: none; /* Bez podvlačenja */
+    font-size: 1.2rem; /* Veličina fonta za linkove */
+    padding: 0.5rem 1rem; /* Razmak unutar linkova */
+    border: 2px solid transparent; /* Nevidljiva granica */
+    transition: all 0.3s ease; /* Efekat na hover */
+}
+
+/* Hover efekat za linkove */
+nav ul li a:hover {
+    border-color: white; /* Prikazuje belu granicu na hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Svetlija pozadina na hover */
+}
+
+/* Header sa slikom u pozadini */
+header {
+    position: relative;
+    height: 100vh; /* Visina header-a */
+    background: Trockenbau-Mönchengladbach-Rainer-Hufschmidt-8.jpg;
+    background-size: cover; /* Pokriva ceo header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikalno centriranje sadržaja */
+    align-items: center; /* Horizontalno centriranje */
+    color: white; /* Boja teksta */
+}
+
+/* Glavni naslov (h1) */
+h1 {
+    font-size: 3.5rem; /* Veličina fonta za naslov */
+    margin-bottom: 20px; /* Razmak ispod naslova za navigaciju */
+    text-align: center; /* Centriranje teksta */
+    z-index: 2; /* Ispred overlay sloja */
+}
+
+/* Tamni overlay za bolji kontrast teksta */
+header .overlay {
+    position: absolute; /* Pozicija overlay sloja */
+    top: 0; /* Od vrha */
+    left: 0; /* Od leve strane */
+    width: 100%; /* Širina preko celog ekrana */
+    height: 100%; /* Visina preko celog header-a */
+    background: rgba(0, 0, 0, 0.5); /* Prozirni tamni sloj preko slike */
+    z-index: 1; /* Ispod naslova i navigacije */
+}
+
+/* Sekcije */
+section {
+    padding: 4rem; /* Unutrašnji razmak za sekcije */
+    max-width: 1200px; /* Maksimalna širina sekcija */
+    margin: 2rem auto; /* Centriranje sekcija */
+    background-color: white; /* Bela pozadina sekcija */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka */
+    text-align: center; /* Centriranje teksta u sekcijama */
+}
+
+/* Naslov za sekcije (h2) */
+section h2 {
+    font-size: 2.5rem; /* Veličina fonta za naslove sekcija */
+    color: #333; /* Tamna boja naslova */
+    margin-bottom: 1rem; /* Razmak ispod naslova */
+}
+
+/* Stil za usluge (listu) */
+#services {
+    text-align: center; /* Centriranje sekcije */
+}
+
+#services ul {
+    list-style-type: none; /* Uklanjanje tačaka */
+    padding: 0; /* Uklanjanje unutrašnjeg razmaka */
+    color: #666; /* Svetla siva boja za tekst */
+    text-align: center; /* Centriranje teksta u listi */
+}
+
+#services ul li {
+    font-size: 1.2rem; /* Veličina fonta za usluge */
+    margin: 10px 0; /* Razmak između usluga */
+}
+
+/* Stil za odeljak "O nama" */
+#about {
+    background-color: #f8f8f8; /* Svetlo siva pozadina */
+    color: #333; /* Tamna boja teksta */
+    padding: 20px; /* Unutrašnji razmak */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    text-align: left; /* Poravnanje teksta levo */
+}
+
+/* Stilizacija za unutrašnje stranice */
+.inner-nav {
+    background-color: #222; /* Tamnija pozadina za unutrašnje stranice */
+    position: fixed; /* Fiksiran na vrhu */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 15px 0;
+}
+
+.inner-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centriranje linkova */
+    gap: 2rem; /* Razmak između linkova */
+}
+
+.inner-nav ul li {
+    margin: 0;
+}
+
+.inner-nav ul li a {
+    color: white; /* Bele veze */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease; /* Efekat prelaska na hover */
+}
+
+.inner-nav ul li a:hover {
+    background-color: #444; /* Blago tamnija boja na hover */
+}
+
+/* Stil za forme */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#usluge ul {
+    list-style-type: none; /* Uklanjanje oznaka liste */
+    padding: 0; /* Uklanjanje unutrašnjeg razmaka */
+    margin: 0; /* Uklanjanje spoljnog razmaka */
+}
+
+
+#contact {
+    padding: 2rem; /* Smanji unutrašnji razmak (padding) */
+    max-width: 600px; /* Opcionalno: smanjiti maksimalnu širinu */
+    margin: 2rem auto; /* Centriranje sekcije */
+    background-color: white; /* Bela pozadina sekcije */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka */
+    text-align: center; /* Centriranje teksta u sekciji */
+}
